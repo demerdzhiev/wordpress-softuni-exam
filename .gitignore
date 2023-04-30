@@ -50,7 +50,7 @@ wp-content/themes/twentytwentytwo/
 
 ### Plugins ###
 /wp-content/db.php
-/wp-content/plugins/wp-dummy-content-generator
+# /wp-content/plugins/wp-dummy-content-generator
 
 ### Backups Files ###
 # List the backup files here
