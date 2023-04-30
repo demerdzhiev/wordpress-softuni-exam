@@ -22,7 +22,7 @@
 
 <?php else : ?>
 
-<?php _e( 'Not found posts', 'softuni' ); ?>
+<?php _e( 'Not found posts', 'exam' ); ?>
 
 <?php endif; ?>
 
