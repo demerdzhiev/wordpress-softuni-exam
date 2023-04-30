@@ -6,24 +6,24 @@
     <div><?php echo category_description(); ?></div>
 <?php } ?>
 
-<ul class="properties-listing">
-    <?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
+
+    <ul class="properties-listing">
 
         <?php while( have_posts() ) : the_post(); ?>
 
-            <?php get_template_part( 'template-parts/home', 'item' ); ?>
+            <?php get_template_part( 'template-parts/post', 'item' ); ?>
 
         <?php endwhile; ?>
 
         <?php posts_nav_link(); ?>
 
-    <?php endif; ?>
-</ul>
+    </ul>
 
 <?php else : ?>
 
-<?php _e( 'Not found posts', 'exam' ); ?>
+    <p><?php _e( 'No posts found', 'exam' ); ?></p>
 
 <?php endif; ?>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>
