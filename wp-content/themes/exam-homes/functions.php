@@ -17,8 +17,8 @@ add_action( 'wp_enqueue_scripts', 'exam_assets' );
  */
 function exam_register_nav_menu(){
     register_nav_menus( array(
-        'primary_menu' => __( 'Primary Menu Name', 'softuni' ),
-        'footer_menu'  => __( 'Footer Menu', 'softuni' ),
+        'primary_menu' => __( 'Primary Menu Name', 'exam' ),
+        'footer_menu'  => __( 'Footer Menu', 'exam' ),
     ) );
 }
 add_action( 'after_setup_theme', 'exam_register_nav_menu', 0 );
