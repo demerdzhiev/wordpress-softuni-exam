@@ -1,12 +1,9 @@
-<?php
-$location = ''; // get the data dynamically
-?>
 
 <li class="property-card">
     <div class="property-primary">
         <h2 class="property-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></h2>
         <div class="property-meta">
-            <span class="meta-location">Location: <?php echo exam_display_single_term( get_the_ID(), 'location' ); ?></span>
+            <span class="meta-location"><?php echo exam_display_single_term( get_the_ID(), 'location' ); ?></span>
             <span class="meta-total-area">Total area: <?php echo exam_display_single_term( get_the_ID(), 'area' ); ?> sq.m</span>
         </div>
         <div class="property-details">
