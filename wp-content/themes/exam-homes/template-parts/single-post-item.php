@@ -21,4 +21,5 @@
             ?>
         </div>
     </div>
+    <?php exam_update_home_views_count( get_the_ID() ) ?>
 </li>

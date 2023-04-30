@@ -1,6 +1,4 @@
-<?php
-$location = ''; // get the data dynamically
-?>
+
 
 <li class="property-card">
     <div class="property-primary">
@@ -25,4 +23,5 @@ $location = ''; // get the data dynamically
             ?>
         </div>
     </div>
+
 </li>
