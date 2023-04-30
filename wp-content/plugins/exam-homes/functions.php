@@ -91,3 +91,53 @@ function exam_update_post_views_count( $post_id ) {
     }
 }
 
+
+/**
+ * Displays the current user name if the user is logged in
+ *
+ * @return void
+ */
+function exam_display_username() {
+    $output = '';
+
+    if ( is_user_logged_in() == true ) {
+        $current_user = wp_get_current_user();
+        $user_display_name = $current_user->data->display_name;
+        $output = 'Hello, ' . $user_display_name . '!';
+    }
+
+    return $output;
+}
+add_shortcode( 'display_username', 'exam_display_username' );
+
+
+/**
+ * Displays the current post's title, image and URL
+ *
+ * @return void
+ */
+function custom_shortcode( $atts ) {
+    $output = '';
+
+    $atts = shortcode_atts( array(
+        'id' => ''
+    ), $atts );
+
+    $property = get_post( $atts['id'] );
+
+    $title = $property->post_title;
+    $image = get_the_post_thumbnail_url( $property->ID );
+    $url = get_permalink( $property->ID );
+
+    $output .= '<p>Title: ' . $title . '</p>';
+    if ( $image ) {
+        $output .= '<img src="' . $image . '" alt="' . $title . '">';
+    }
+    $output .= '<p>URL: <a href="' . $url . '">' . $url . '</a></p>';
+
+    return $output;
+
+
+}
+add_shortcode( 'properties', 'custom_shortcode' );
+
